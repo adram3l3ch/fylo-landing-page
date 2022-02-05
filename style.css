@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5em;
+}
+
+:root {
+    --blue500: hsl(217, 28%, 15%);
+    --blue600: hsl(219, 30%, 18%);
+    --blue700: hsl(218, 28%, 13%);
+    --blue800: hsl(216, 53%, 9%);
+    --gradient: hsl(176, 68%, 64%), hsl(198, 60%, 50%);
+    --red: hsl(0, 100%, 63%);
+    --white: hsl(0, 0%, 100%);
+    font-size: calc(1rem - 2px);
+}
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif; */
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: var(--white);
+}
+
+h1,
+h2,
+h3,
+button,
+a {
+    font-family: "Raleway", sans-serif;
+}
+
+.header {
+    background-color: var(--blue500);
+    display: flex;
+    padding: 3rem;
+    align-items: center;
+}
+
+.header__logo {
+    width: 8rem;
+}
+
+.header__nav {
+    margin-left: auto;
+}
+
+.header__navlinks {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.header__navlink a {
+    color: var(--white) !important;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.home__hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: auto;
+    background: url(./images/bg-curvy-desktop.svg) left bottom no-repeat;
+    background-size: contain;
+    padding-bottom: 7rem;
+}
+
+.home__hero > * {
+    max-width: 35rem;
+}
+
+.home__hero__image {
+    width: 100%;
+}
+
+.home {
+    background-color: var(--blue500);
+}
+
+.home__features {
+    background-color: var(--blue700);
+}
+
+.home__title,
+.home__desc {
+    text-align: center;
+}
+
+.home__title {
+    font-size: 2rem;
+}
+
+.home__desc {
+    font-size: 1.1rem;
+}
+
+.btn {
+    background: linear-gradient(90deg, var(--gradient));
+    border: none;
+    padding: 0.75rem 2rem;
+    min-width: 15rem;
+    border-radius: 10rem;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s linear, box-shadow 0.2s linear;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 40px hsl(176, 68%, 64%, 0.2);
+}
+
+/* -------------------------home-hero end----------------------------- */
+
+.home__features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    margin: auto;
+    gap: 5rem;
+    padding: 5rem;
+}
+
+.home__feature {
+    text-align: center;
+}
+
+.home__feature__image {
+    height: 5rem;
+    margin-bottom: 1rem;
+}
+
+.home__feature__title {
+    margin-bottom: 0.5rem;
+}
